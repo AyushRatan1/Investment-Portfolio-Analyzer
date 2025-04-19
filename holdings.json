@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Infosys",
+    "ticker": "INFY",
+    "sector": "IT Services"
+  },
+  {
+    "name": "HDFC Bank",
+    "ticker": "HDFCBANK",
+    "sector": "Banking"
+  }
+] 

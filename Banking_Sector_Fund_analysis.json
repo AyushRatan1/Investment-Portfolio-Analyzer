@@ -1,0 +1,212 @@
+{
+  "fund_name": "Banking_Sector_Fund",
+  "timestamp": "2025-04-19T16:22:46.079037",
+  "holdings_count": 18,
+  "top_holdings": [
+    {
+      "name": "IDBI Bank Ltd",
+      "ticker": "IDBI",
+      "percentage": 90.0,
+      "sector": "Public Banking"
+    },
+    {
+      "name": "HDFC Bank Ltd",
+      "ticker": "HDFCBANK",
+      "percentage": 16.8,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "ICICI Bank Ltd",
+      "ticker": "ICICIBANK",
+      "percentage": 14.5,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "State Bank of India",
+      "ticker": "SBIN",
+      "percentage": 12.3,
+      "sector": "Public Banking"
+    },
+    {
+      "name": "Axis Bank Ltd",
+      "ticker": "AXISBANK",
+      "percentage": 10.7,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "Kotak Mahindra Bank Ltd",
+      "ticker": "KOTAKBANK",
+      "percentage": 8.9,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "IndusInd Bank Ltd",
+      "ticker": "INDUSINDBK",
+      "percentage": 6.5,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "Bandhan Bank Ltd",
+      "ticker": "BANDHANBNK",
+      "percentage": 4.8,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "Federal Bank Ltd",
+      "ticker": "FEDERALBNK",
+      "percentage": 4.2,
+      "sector": "Private Banking"
+    },
+    {
+      "name": "Bank of Baroda",
+      "ticker": "BANKBARODA",
+      "percentage": 3.9,
+      "sector": "Public Banking"
+    }
+  ],
+  "sector_exposure": {
+    "Public Banking": 115.49999999999999,
+    "Private Banking": 73.6
+  },
+  "stock_analyses": [
+    {
+      "stock": "IDBI Bank Ltd",
+      "ticker": "IDBI",
+      "news_summary": "No significant news found for IDBI Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "HDFC Bank Ltd",
+      "ticker": "HDFCBANK",
+      "news_summary": "No significant news found for HDFC Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "ICICI Bank Ltd",
+      "ticker": "ICICIBANK",
+      "news_summary": "No significant news found for ICICI Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "State Bank of India",
+      "ticker": "SBIN",
+      "news_summary": "No significant news found for State Bank of India",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Axis Bank Ltd",
+      "ticker": "AXISBANK",
+      "news_summary": "No significant news found for Axis Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Kotak Mahindra Bank Ltd",
+      "ticker": "KOTAKBANK",
+      "news_summary": "No significant news found for Kotak Mahindra Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "IndusInd Bank Ltd",
+      "ticker": "INDUSINDBK",
+      "news_summary": "No significant news found for IndusInd Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Bandhan Bank Ltd",
+      "ticker": "BANDHANBNK",
+      "news_summary": "No significant news found for Bandhan Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Federal Bank Ltd",
+      "ticker": "FEDERALBNK",
+      "news_summary": "No significant news found for Federal Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Bank of Baroda",
+      "ticker": "BANKBARODA",
+      "news_summary": "No significant news found for Bank of Baroda",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Punjab National Bank",
+      "ticker": "PNB",
+      "news_summary": "No significant news found for Punjab National Bank",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "IDFC First Bank Ltd",
+      "ticker": "IDFCFIRSTB",
+      "news_summary": "No significant news found for IDFC First Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "AU Small Finance Bank Ltd",
+      "ticker": "AUBANK",
+      "news_summary": "No significant news found for AU Small Finance Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Canara Bank",
+      "ticker": "CANBK",
+      "news_summary": "No significant news found for Canara Bank",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "RBL Bank Ltd",
+      "ticker": "RBLBANK",
+      "news_summary": "No significant news found for RBL Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Bank of India",
+      "ticker": "BANKINDIA",
+      "news_summary": "No significant news found for Bank of India",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Indian Bank",
+      "ticker": "INDIANB",
+      "news_summary": "No significant news found for Indian Bank",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Union Bank of India",
+      "ticker": "UNIONBANK",
+      "news_summary": "No significant news found for Union Bank of India",
+      "impact": "Neutral",
+      "additional_news": []
+    }
+  ],
+  "llm_analysis": {
+    "summary": "Error performing LLM analysis: 401 Client Error: Unauthorized for url: https://api.groq.com/openai/v1/chat/completions",
+    "impact": "Neutral",
+    "recommendations": [
+      "Consult a financial advisor"
+    ],
+    "risks": [
+      "Unable to assess risks due to analysis error"
+    ],
+    "opportunities": [
+      "Unable to assess opportunities due to analysis error"
+    ]
+  }
+}

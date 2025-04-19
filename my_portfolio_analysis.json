@@ -1,0 +1,93 @@
+{
+  "stocks": [
+    {
+      "stock": "Infosys Ltd",
+      "ticker": "INFY",
+      "news_summary": "Sector news: Starlink Officials Meet Piyush Goyal to Discuss India Expansion",
+      "impact": "Positive",
+      "additional_news": [
+        {
+          "title": "Sector news: Vi\u2019s 5G rollout boosts 5G site additions in March 2025",
+          "description": "Vodafone Idea's 5G rollout spurred a surge in net 5G base station additions in March 2025, reversing a previous decline. Analysts anticipate this acceleration to continue as Vi expands its 5G coverage to major Indian cities. While Vi ramps up, larger telcos l\u2026",
+          "source": "The Times of India",
+          "url": "https://economictimes.indiatimes.com/industry/telecom/telecom-news/vis-5g-rollout-boosts-5g-site-additions-in-march-2025/articleshow/120403650.cms",
+          "published_at": "2025-04-18T08:27:58Z"
+        },
+        {
+          "title": "Sector news: Smart Waste Management Market Trends and Innovations 2025 Featuring Key Players IBM, Veolia Environnement, Republic Services, Waste Management, and TOMRA Sorting Solutions Among Others",
+          "description": "Key trends include IoT integration, AI adoption, and smart technology solutions. Leading players such as IBM, Veolia, and Republic Services are pioneering innovations to enhance efficiency and sustainability. North America leads the market, while Asia-Pacific\u2026",
+          "source": "GlobeNewswire",
+          "url": "https://www.globenewswire.com/news-release/2025/04/18/3063994/28124/en/Smart-Waste-Management-Market-Trends-and-Innovations-2025-Featuring-Key-Players-IBM-Veolia-Environnement-Republic-Services-Waste-Management-and-TOMRA-Sorting-Solutions-Among-Others.html",
+          "published_at": "2025-04-18T08:23:00Z"
+        }
+      ]
+    },
+    {
+      "stock": "HDFC Bank Ltd",
+      "ticker": "HDFCBANK",
+      "news_summary": "Sector news: CoinEx Sponsors National Finance Summit 2025: Shaping the Future of Finance",
+      "impact": "Positive",
+      "additional_news": [
+        {
+          "title": "Sector news: Entertainment venue management firm Legends International disclosed a data breach",
+          "description": "Legends International disclosed a data breach from November 2024 that affected employees and visitors to its managed venues. Legends International is a global leader in sports and entertainment venue management, specializing in delivering comprehensive soluti\u2026",
+          "source": "Securityaffairs.com",
+          "url": "https://securityaffairs.com/176674/data-breach/legends-international-disclosed-a-data-breach.html",
+          "published_at": "2025-04-18T07:20:18Z"
+        },
+        {
+          "title": "Sector news: Entertainment venue management firm Legends International disclosed a data breach",
+          "description": "Legends International disclosed a data breach from November 2024 that affected employees and visitors to its managed venues. Legends International is a global leader in sports and entertainment venue management, specializing in delivering comprehensive soluti\u2026",
+          "source": "Securityaffairs.com",
+          "url": "https://securityaffairs.com/176674/uncategorized/legends-international-disclosed-a-data-breach.html",
+          "published_at": "2025-04-18T07:20:18Z"
+        }
+      ]
+    },
+    {
+      "stock": "Reliance Industries Ltd",
+      "ticker": "RELIANCE",
+      "news_summary": "Campa Cola to open new bottling plant in Begusarai",
+      "impact": "Positive",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Consultancy Services Ltd",
+      "ticker": "TCS",
+      "news_summary": "From Infosys to TCS: Are IT companies in a downturn? Are IT jobs in danger? Zoho CEO Sridhar Vembu says...",
+      "impact": "Negative",
+      "additional_news": [
+        {
+          "title": "\"Misleading\": TCS Denies Bias Towards Indian Staff In US During Layoffs",
+          "description": "The allegations have been levelled by former employees largely of non-South Asian descent, who say the company targeted them for layoffs.",
+          "source": "NDTV News",
+          "url": "https://www.ndtv.com/world-news/misleading-tcs-denies-bias-towards-indian-staff-in-us-during-layoffs-8192845",
+          "published_at": "2025-04-18T03:03:22Z"
+        },
+        {
+          "title": "Slowing growth casualty of tariff war: Tech majors",
+          "description": "The chief executives of Infosys, TCS, and Wipro cited prevailing volatility from the tariff war as reason some of their clients in markets across United Sates and Europe are pausing existing projects, rethinking fresh spending and turning instead to eking out\u2026",
+          "source": "The Times of India",
+          "url": "https://economictimes.indiatimes.com/tech/information-tech/slowing-growth-casualty-of-tariff-war-tech-majors/articleshow/120397788.cms",
+          "published_at": "2025-04-18T02:30:05Z"
+        }
+      ]
+    },
+    {
+      "stock": "ITC Ltd",
+      "ticker": "ITC",
+      "news_summary": "24 Mantra: From organic niche market to acquisition by ITC",
+      "impact": "Positive",
+      "additional_news": [
+        {
+          "title": "ITC to buy organic brand 24 Mantra in Rs 473cr deal",
+          "description": "India-Business News: NEW DELHI: ITC on Thursday said it will acquire Sresta Natural Bioproducts, engaged in the manufacturing and sale of organic packaged food products un.",
+          "source": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/business/india-business/itc-to-buy-organic-brand-24-mantra-in-rs-473cr-deal/articleshow/120398158.cms",
+          "published_at": "2025-04-18T03:15:02Z"
+        }
+      ]
+    }
+  ],
+  "timestamp": "2025-04-19T15:12:36.182563"
+}

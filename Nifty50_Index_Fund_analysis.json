@@ -1,0 +1,242 @@
+{
+  "fund_name": "Nifty50_Index_Fund",
+  "timestamp": "2025-04-19T16:28:22.212612",
+  "holdings_count": 20,
+  "top_holdings": [
+    {
+      "name": "Reliance Industries Ltd",
+      "ticker": "RELIANCE",
+      "percentage": 11.5,
+      "sector": "Oil & Gas"
+    },
+    {
+      "name": "HDFC Bank Ltd",
+      "ticker": "HDFCBANK",
+      "percentage": 9.2,
+      "sector": "Banking"
+    },
+    {
+      "name": "ICICI Bank Ltd",
+      "ticker": "ICICIBANK",
+      "percentage": 8.1,
+      "sector": "Banking"
+    },
+    {
+      "name": "Infosys Ltd",
+      "ticker": "INFY",
+      "percentage": 7.3,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Tata Consultancy Services Ltd",
+      "ticker": "TCS",
+      "percentage": 5.9,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Larsen & Toubro Ltd",
+      "ticker": "LT",
+      "percentage": 4.3,
+      "sector": "Construction"
+    },
+    {
+      "name": "Hindustan Unilever Ltd",
+      "ticker": "HINDUNILVR",
+      "percentage": 3.8,
+      "sector": "FMCG"
+    },
+    {
+      "name": "State Bank of India",
+      "ticker": "SBIN",
+      "percentage": 3.5,
+      "sector": "Banking"
+    },
+    {
+      "name": "Bharti Airtel Ltd",
+      "ticker": "BHARTIARTL",
+      "percentage": 3.2,
+      "sector": "Telecom"
+    },
+    {
+      "name": "ITC Ltd",
+      "ticker": "ITC",
+      "percentage": 3.1,
+      "sector": "FMCG"
+    }
+  ],
+  "sector_exposure": {
+    "Oil & Gas": 11.5,
+    "Banking": 26.399999999999995,
+    "IT Services": 13.2,
+    "Construction": 4.3,
+    "FMCG": 6.9,
+    "Telecom": 3.2,
+    "Automobile": 6.9,
+    "Consumer Durables": 1.9,
+    "Metals": 1.8,
+    "Pharmaceuticals": 1.7,
+    "Energy": 1.6,
+    "Financial Services": 1.5
+  },
+  "stock_analyses": [
+    {
+      "stock": "Reliance Industries Ltd",
+      "ticker": "RELIANCE",
+      "news_summary": "No significant news found for Reliance Industries Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "HDFC Bank Ltd",
+      "ticker": "HDFCBANK",
+      "news_summary": "No significant news found for HDFC Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "ICICI Bank Ltd",
+      "ticker": "ICICIBANK",
+      "news_summary": "No significant news found for ICICI Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Infosys Ltd",
+      "ticker": "INFY",
+      "news_summary": "No significant news found for Infosys Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Consultancy Services Ltd",
+      "ticker": "TCS",
+      "news_summary": "No significant news found for Tata Consultancy Services Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Larsen & Toubro Ltd",
+      "ticker": "LT",
+      "news_summary": "No significant news found for Larsen & Toubro Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Hindustan Unilever Ltd",
+      "ticker": "HINDUNILVR",
+      "news_summary": "No significant news found for Hindustan Unilever Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "State Bank of India",
+      "ticker": "SBIN",
+      "news_summary": "No significant news found for State Bank of India",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Bharti Airtel Ltd",
+      "ticker": "BHARTIARTL",
+      "news_summary": "No significant news found for Bharti Airtel Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "ITC Ltd",
+      "ticker": "ITC",
+      "news_summary": "No significant news found for ITC Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Kotak Mahindra Bank Ltd",
+      "ticker": "KOTAKBANK",
+      "news_summary": "No significant news found for Kotak Mahindra Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Axis Bank Ltd",
+      "ticker": "AXISBANK",
+      "news_summary": "No significant news found for Axis Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Mahindra & Mahindra Ltd",
+      "ticker": "M&M",
+      "news_summary": "No significant news found for Mahindra & Mahindra Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Maruti Suzuki India Ltd",
+      "ticker": "MARUTI",
+      "news_summary": "No significant news found for Maruti Suzuki India Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Motors Ltd",
+      "ticker": "TATAMOTORS",
+      "news_summary": "No significant news found for Tata Motors Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Asian Paints Ltd",
+      "ticker": "ASIANPAINT",
+      "news_summary": "No significant news found for Asian Paints Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Steel Ltd",
+      "ticker": "TATASTEEL",
+      "news_summary": "No significant news found for Tata Steel Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Sun Pharmaceutical Industries Ltd",
+      "ticker": "SUNPHARMA",
+      "news_summary": "No significant news found for Sun Pharmaceutical Industries Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Coal India Ltd",
+      "ticker": "COALINDIA",
+      "news_summary": "No significant news found for Coal India Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Bajaj Finance Ltd",
+      "ticker": "BAJFINANCE",
+      "news_summary": "No significant news found for Bajaj Finance Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    }
+  ],
+  "llm_analysis": {
+    "summary": "This is a diversified mutual fund with 20 holdings. The fund has significant exposure to Banking sector. Based on recent news, the overall outlook appears neutral.",
+    "impact": "Neutral",
+    "recommendations": [
+      "Maintain a balanced approach to this fund in your portfolio",
+      "Monitor key holdings for any significant news developments",
+      "Consider this fund as part of a diversified investment strategy"
+    ],
+    "risks": [
+      "Concentration risk due to high exposure to Banking sector",
+      "Market volatility affecting fund performance",
+      "Regulatory changes impacting the industry"
+    ],
+    "opportunities": [
+      "Growth potential in the Banking sector",
+      "Potential for dividend income from established holdings",
+      "Possible upside from undervalued assets in the portfolio"
+    ]
+  }
+}

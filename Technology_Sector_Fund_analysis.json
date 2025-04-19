@@ -1,0 +1,234 @@
+{
+  "fund_name": "Technology_Sector_Fund",
+  "timestamp": "2025-04-19T16:24:34.562749",
+  "holdings_count": 20,
+  "top_holdings": [
+    {
+      "name": "Infosys Ltd",
+      "ticker": "INE009A01021",
+      "percentage": 13.5,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Tata Consultancy Services Ltd",
+      "ticker": "INE467B01029",
+      "percentage": 12.8,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Wipro Ltd",
+      "ticker": "INE075A01022",
+      "percentage": 8.5,
+      "sector": "IT Services"
+    },
+    {
+      "name": "HCL Technologies Ltd",
+      "ticker": "INE860A01027",
+      "percentage": 7.9,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Tech Mahindra Ltd",
+      "ticker": "INE669C01036",
+      "percentage": 6.5,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Bharti Airtel Ltd",
+      "ticker": "INE397D01024",
+      "percentage": 5.8,
+      "sector": "Telecom"
+    },
+    {
+      "name": "Tata Communications Ltd",
+      "ticker": "INE151A01013",
+      "percentage": 4.3,
+      "sector": "Telecom"
+    },
+    {
+      "name": "Persistent Systems Ltd",
+      "ticker": "INE262H01013",
+      "percentage": 3.9,
+      "sector": "IT Services"
+    },
+    {
+      "name": "LTIMindtree Ltd",
+      "ticker": "INE214T01019",
+      "percentage": 3.7,
+      "sector": "IT Services"
+    },
+    {
+      "name": "Tata Elxsi Ltd",
+      "ticker": "INE670A01012",
+      "percentage": 3.5,
+      "sector": "IT Services"
+    }
+  ],
+  "sector_exposure": {
+    "IT Services": 74.0,
+    "Telecom": 10.1,
+    "Software": 6.1,
+    "E-Commerce": 1.8
+  },
+  "stock_analyses": [
+    {
+      "stock": "Infosys Ltd",
+      "ticker": "INE009A01021",
+      "news_summary": "No significant news found for Infosys Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Consultancy Services Ltd",
+      "ticker": "INE467B01029",
+      "news_summary": "No significant news found for Tata Consultancy Services Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Wipro Ltd",
+      "ticker": "INE075A01022",
+      "news_summary": "No significant news found for Wipro Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "HCL Technologies Ltd",
+      "ticker": "INE860A01027",
+      "news_summary": "No significant news found for HCL Technologies Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tech Mahindra Ltd",
+      "ticker": "INE669C01036",
+      "news_summary": "No significant news found for Tech Mahindra Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Bharti Airtel Ltd",
+      "ticker": "INE397D01024",
+      "news_summary": "No significant news found for Bharti Airtel Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Communications Ltd",
+      "ticker": "INE151A01013",
+      "news_summary": "No significant news found for Tata Communications Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Persistent Systems Ltd",
+      "ticker": "INE262H01013",
+      "news_summary": "No significant news found for Persistent Systems Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "LTIMindtree Ltd",
+      "ticker": "INE214T01019",
+      "news_summary": "No significant news found for LTIMindtree Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Tata Elxsi Ltd",
+      "ticker": "INE670A01012",
+      "news_summary": "No significant news found for Tata Elxsi Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Mphasis Ltd",
+      "ticker": "INE356A01018",
+      "news_summary": "No significant news found for Mphasis Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Coforge Ltd",
+      "ticker": "INE591G01017",
+      "news_summary": "No significant news found for Coforge Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Cyient Ltd",
+      "ticker": "INE136B01020",
+      "news_summary": "No significant news found for Cyient Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Oracle Financial Services Software Ltd",
+      "ticker": "INE881D01027",
+      "news_summary": "No significant news found for Oracle Financial Services Software Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Sonata Software Ltd",
+      "ticker": "INE269A01021",
+      "news_summary": "No significant news found for Sonata Software Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "KPIT Technologies Ltd",
+      "ticker": "INE058I01045",
+      "news_summary": "No significant news found for KPIT Technologies Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Indiamart Intermesh Ltd",
+      "ticker": "INE933S01016",
+      "news_summary": "No significant news found for Indiamart Intermesh Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Zensar Technologies Ltd",
+      "ticker": "INE218A01016",
+      "news_summary": "No significant news found for Zensar Technologies Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Intellect Design Arena Ltd",
+      "ticker": "INE306R01017",
+      "news_summary": "No significant news found for Intellect Design Arena Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Birlasoft Ltd",
+      "ticker": "INE836A01035",
+      "news_summary": "No significant news found for Birlasoft Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    }
+  ],
+  "llm_analysis": {
+    "summary": "This is a diversified mutual fund with 20 holdings. The fund has significant exposure to IT Services sector. Based on recent news, the overall outlook appears neutral.",
+    "impact": "Neutral",
+    "recommendations": [
+      "Maintain a balanced approach to this fund in your portfolio",
+      "Monitor key holdings for any significant news developments",
+      "Consider this fund as part of a diversified investment strategy"
+    ],
+    "risks": [
+      "Concentration risk due to high exposure to IT Services sector",
+      "Market volatility affecting fund performance",
+      "Regulatory changes impacting the industry"
+    ],
+    "opportunities": [
+      "Growth potential in the IT Services sector",
+      "Potential for dividend income from established holdings",
+      "Possible upside from undervalued assets in the portfolio"
+    ]
+  }
+}

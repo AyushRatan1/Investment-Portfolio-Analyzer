@@ -1,0 +1,26 @@
+{
+  "stocks": [
+    {
+      "stock": "Infosys Ltd",
+      "ticker": "INFY",
+      "news_summary": "No significant news found for Infosys Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "HDFC Bank Ltd",
+      "ticker": "HDFCBANK",
+      "news_summary": "No significant news found for HDFC Bank Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    },
+    {
+      "stock": "Reliance Industries Ltd",
+      "ticker": "RELIANCE",
+      "news_summary": "No significant news found for Reliance Industries Ltd",
+      "impact": "Neutral",
+      "additional_news": []
+    }
+  ],
+  "timestamp": "2025-04-19T16:25:13.330146"
+}
