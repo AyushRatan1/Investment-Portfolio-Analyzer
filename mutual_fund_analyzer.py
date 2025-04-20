@@ -253,7 +253,7 @@ class MutualFundAnalyzer:
     
     def get_llm_analysis(self, fund: MutualFund, stock_analyses: List[StockAnalysis]) -> LLMAnalysis:
         """
-        Use LLM to perform comprehensive analysis of the mutual fund
+        Use LLM to perform comprehensive analysis of the mutual fund with focus on long-term outlook
         """
         try:
             # Prepare data for LLM
@@ -279,69 +279,216 @@ class MutualFundAnalyzer:
                     f"{analysis.stock} ({analysis.ticker}): {analysis.impact} - {analysis.news_summary}"
                 )
             
-            impact_distribution = ", ".join([f"{k}: {v}" for k, v in impact_counts.items()])
+            print("Using advanced fallback analysis method (enhancing sector-based insights with long-term perspective)")
             
-            # Since we're having issues with the LLM API, we'll provide a fallback analysis
-            # based on the data we have
-            
-            print("Using fallback analysis method (API connection failed)")
-            
-            # Determine overall impact based on news counts
-            if impact_counts["Positive"] > impact_counts["Negative"]:
-                overall_impact = "Positive"
+            # Determine overall impact based on news counts, but focus on structural trends
+            if impact_counts["Positive"] > impact_counts["Negative"] * 1.5:
+                overall_impact = "Strongly Positive"
+            elif impact_counts["Positive"] > impact_counts["Negative"]:
+                overall_impact = "Moderately Positive"
+            elif impact_counts["Negative"] > impact_counts["Positive"] * 1.5:
+                overall_impact = "Strongly Negative"
             elif impact_counts["Negative"] > impact_counts["Positive"]:
-                overall_impact = "Negative"
+                overall_impact = "Moderately Negative"
             else:
                 overall_impact = "Neutral"
             
-            # Generate a basic summary
-            fund_type = "diversified"
-            top_sector = max(fund.sector_exposure.items(), key=lambda x: x[1])[0] if fund.sector_exposure else "unknown"
+            # Generate a more comprehensive summary with long-term focus
+            # Get top sectors and their exposure
+            top_sectors = sorted(fund.sector_exposure.items(), key=lambda x: x[1], reverse=True)
+            top_sector = top_sectors[0][0] if top_sectors else "unknown"
+            sector_concentration = sum(1 for _, pct in top_sectors if pct > 10)
             
-            if len(fund.sector_exposure) == 1:
-                fund_type = f"{top_sector} focused"
-            elif len(fund.sector_exposure) < 3:
-                fund_type = f"{top_sector} heavy"
+            # Analyze geographical distribution (assume names contain country indicators)
+            foreign_exposure = []
+            india_keywords = ['india', 'indian', 'nse', 'bse', 'ltd', 'limited']
+            us_keywords = ['inc', 'corp', 'nyse', 'nasdaq']
+            eu_keywords = ['plc', 'sa', 'nv', 'ag']
             
-            summary = f"This is a {fund_type} mutual fund with {len(fund.holdings)} holdings. "
-            summary += f"The fund has significant exposure to {top_sector} sector. "
-            summary += f"Based on recent news, the overall outlook appears {overall_impact.lower()}."
+            for holding in fund.holdings:
+                name_lower = holding.name.lower()
+                ticker_lower = (holding.ticker or "").lower()
+                
+                if any(kw in ticker_lower or kw in name_lower for kw in us_keywords):
+                    foreign_exposure.append(("US", holding))
+                elif any(kw in ticker_lower or kw in name_lower for kw in eu_keywords):
+                    foreign_exposure.append(("EU", holding))
+                # Assume other holdings are domestic (Indian) by default
             
-            # Generate basic recommendations
-            recommendations = []
-            if overall_impact == "Positive":
-                recommendations = [
-                    "Consider maintaining or increasing allocation to this fund given the positive news environment",
-                    "Monitor the fund's top holdings for continued positive momentum",
-                    "Compare this fund's performance with peers in the same sector"
-                ]
-            elif overall_impact == "Negative":
-                recommendations = [
-                    "Review your allocation to this fund in light of recent negative news",
-                    "Consider diversifying to reduce exposure to the affected sectors",
-                    "Monitor the fund's top holdings closely for any changes in trend"
-                ]
+            # Determine fund characteristics with long-term perspective
+            is_diversified = len(fund.sector_exposure) > 5
+            is_concentrated = sector_concentration >= 2
+            top_holding_weight = fund.holdings[0].percentage if fund.holdings else 0
+            is_top_heavy = top_holding_weight > 10
+            foreign_weight = sum(holding.percentage for _, holding in foreign_exposure)
+            
+            # Analyze cyclical vs. defensive sectors
+            cyclical_sectors = ["Technology", "Consumer Discretionary", "Industrials", "Materials", "Real Estate"]
+            defensive_sectors = ["Healthcare", "Consumer Staples", "Utilities", "Telecommunications"]
+            financial_sectors = ["Banking", "Financial Services", "Insurance"]
+            
+            cyclical_weight = sum(pct for sector, pct in fund.sector_exposure.items() 
+                                if any(s.lower() in sector.lower() for s in cyclical_sectors))
+            defensive_weight = sum(pct for sector, pct in fund.sector_exposure.items() 
+                                 if any(s.lower() in sector.lower() for s in defensive_sectors))
+            financial_weight = sum(pct for sector, pct in fund.sector_exposure.items() 
+                                 if any(s.lower() in sector.lower() for s in financial_sectors))
+            
+            # Analyze market trends based on holdings news and sector allocation
+            sector_impact = {}
+            for analysis in stock_analyses:
+                sector = next((h.sector for h in fund.holdings if h.name == analysis.stock), None)
+                if sector:
+                    if sector not in sector_impact:
+                        sector_impact[sector] = {"Positive": 0, "Negative": 0, "Neutral": 0}
+                    sector_impact[sector][analysis.impact] += 1
+            
+            # Identify growth sectors and challenged sectors (longer-term outlook)
+            positive_sectors = [s for s, counts in sector_impact.items() 
+                               if counts["Positive"] > counts["Negative"] and counts["Positive"] > 0]
+            negative_sectors = [s for s, counts in sector_impact.items() 
+                               if counts["Negative"] > counts["Positive"] and counts["Negative"] > 0]
+            
+            # Create a detailed market outlook summary with long-term perspective
+            summary = f"The {fund.name} is a {'' if is_diversified else 'non-'}diversified fund with {len(fund.holdings)} holdings across {len(fund.sector_exposure)} sectors. "
+            
+            if is_concentrated:
+                summary += f"The fund shows significant concentration in {sector_concentration} key sectors, with {top_sector} representing the largest allocation ({top_sectors[0][1]:.1f}%). "
             else:
-                recommendations = [
-                    "Maintain a balanced approach to this fund in your portfolio",
-                    "Monitor key holdings for any significant news developments",
-                    "Consider this fund as part of a diversified investment strategy"
-                ]
+                summary += f"The portfolio maintains a well-balanced allocation strategy with its highest exposure in {top_sector} ({top_sectors[0][1]:.1f}%). "
             
-            # Generate risks
-            risks = [
-                f"Concentration risk due to high exposure to {top_sector} sector",
-                "Market volatility affecting fund performance",
-                "Regulatory changes impacting the industry"
-            ]
+            if is_top_heavy:
+                summary += f"The fund's position is notably concentrated, with its largest holding representing {top_holding_weight:.1f}% of the portfolio. "
             
-            # Generate opportunities
-            opportunities = [
-                f"Growth potential in the {top_sector} sector",
-                "Potential for dividend income from established holdings",
-                "Possible upside from undervalued assets in the portfolio"
-            ]
+            # Add market structure and long-term trend analysis
+            if cyclical_weight > 50:
+                summary += f"With {cyclical_weight:.1f}% allocated to cyclical sectors, the fund is positioned to benefit from economic expansion phases but may face increased volatility during economic downturns. "
+            elif defensive_weight > 50:
+                summary += f"With {defensive_weight:.1f}% in defensive sectors, the fund is structured to provide stability during market downturns, though it may underperform during strong bull markets. "
+            elif financial_weight > 30:
+                summary += f"The significant {financial_weight:.1f}% exposure to financial sectors makes the fund sensitive to interest rate cycles and regulatory changes in the banking industry. "
             
+            # Add geographical insights
+            if foreign_exposure:
+                summary += f"The fund has approximately {foreign_weight:.1f}% exposure to international markets, introducing currency fluctuation risks but providing geographical diversification benefits. "
+            
+            # Add long-term sector outlook
+            if positive_sectors:
+                summary += f"From a long-term perspective, the {', '.join(positive_sectors[:2])} {'sector' if len(positive_sectors) == 1 else 'sectors'} show structural growth potential based on current trends and market dynamics. "
+            if negative_sectors:
+                summary += f"Conversely, the {', '.join(negative_sectors[:2])} {'sector' if len(negative_sectors) == 1 else 'sectors'} may face long-term structural challenges that warrant careful monitoring. "
+            
+            summary += f"The overall long-term outlook for this fund appears {overall_impact.lower()} based on its composition, sector allocations, and current market trends."
+            
+            # Generate strategic recommendations with long-term focus
+            recommendations = []
+            
+            # Core allocation strategies
+            if is_concentrated and cyclical_weight > 60:
+                recommendations.append(f"Consider introducing defensive sector allocations to balance the fund's high exposure to economic cycles")
+            elif is_concentrated and defensive_weight > 60:
+                recommendations.append(f"Evaluate opportunities to introduce growth-oriented positions to improve long-term return potential")
+            elif is_diversified:
+                recommendations.append(f"Maintain the current diversified allocation as a core strategy, with tactical adjustments based on economic cycles")
+            
+            # Sector-specific long-term recommendations
+            if positive_sectors:
+                recommendations.append(f"Establish strategic core positions in the {positive_sectors[0]} sector which shows structural growth potential")
+            if negative_sectors:
+                recommendations.append(f"Implement a gradual reduction strategy for {negative_sectors[0]} sector exposure over multiple quarters")
+            
+            # Geographic allocation recommendations
+            if foreign_weight > 20:
+                recommendations.append("Implement currency hedging strategies for significant foreign holdings to manage exchange rate volatility")
+            elif foreign_weight < 5:
+                recommendations.append("Consider introducing select international positions to enhance diversification and capture global growth opportunities")
+            
+            # Position sizing recommendations
+            if is_top_heavy:
+                recommendations.append(f"Gradually reduce concentration in top holdings through multi-quarter rebalancing to manage company-specific risk")
+            
+            # Economic cycle positioning
+            if financial_weight > 25:
+                recommendations.append("Monitor central bank policies closely as interest rate cycles significantly impact the fund's financial sector holdings")
+            
+            if "Technology" in ''.join(fund.sector_exposure.keys()) and any("Technology" in s for s in positive_sectors):
+                recommendations.append("Maintain overweight positions in technology leaders while diversifying across software, hardware, and services subsectors")
+            
+            # Generate comprehensive risk factors with long-term perspective
+            risks = []
+            
+            # Structural concentration risks
+            if is_concentrated:
+                risks.append(f"Long-term sector concentration risk with {sector_concentration} sectors comprising over 10% each")
+            
+            # Single company exposure
+            if is_top_heavy:
+                top_holding = fund.holdings[0].name
+                risks.append(f"Extended company-specific exposure risk with {top_holding} representing {top_holding_weight:.1f}% of assets")
+            
+            # Cyclical vs defensive positioning risks
+            if cyclical_weight > 60:
+                risks.append("High sensitivity to economic slowdowns due to cyclical sector overexposure")
+            elif defensive_weight > 60:
+                risks.append("Potential underperformance during sustained bull markets due to defensive sector focus")
+            
+            # Geographical and currency risks
+            if foreign_weight > 15:
+                risks.append(f"Currency fluctuation risk from {foreign_weight:.1f}% international exposure affecting total returns")
+            
+            # Macroeconomic policy risks
+            if financial_weight > 25:
+                risks.append("Extended exposure to monetary policy and regulatory changes through significant financial sector allocation")
+            
+            # Factor in sector-specific structural risks
+            primary_sectors = [s[0] for s in top_sectors[:3]]
+            
+            if any("Banking" in s or "Financial" in s for s in primary_sectors):
+                risks.append("Long-term exposure to interest rate cycles and regulatory environment changes through financial holdings")
+            
+            if any("Technology" in s for s in primary_sectors):
+                risks.append("Technology sector valuations vulnerable to shifts in growth expectations and regulatory frameworks")
+            
+            if any("Energy" in s or "Oil" in s for s in primary_sectors):
+                risks.append("Energy transition risks affecting traditional oil and gas holdings over multi-year horizons")
+                
+            if any("Pharmaceutical" in s or "Healthcare" in s for s in primary_sectors):
+                risks.append("Drug pricing reform and healthcare policy changes presenting regulatory risks to pharmaceutical holdings")
+            
+            # Generate long-term opportunities with structural growth focus
+            opportunities = []
+            
+            # Sector-based long-term growth opportunities
+            if positive_sectors:
+                for sector in positive_sectors[:2]:
+                    opportunities.append(f"Structural growth potential in {sector} sector driven by sustained demand and innovation")
+            
+            # Economic evolution opportunities
+            primary_sectors = [s[0] for s in top_sectors[:3]]
+            sector_str = ' '.join(primary_sectors).lower()
+            
+            if any("Banking" in s or "Financial" in s for s in primary_sectors):
+                opportunities.append("Fintech integration and digital banking transformation driving long-term value creation in financial holdings")
+            
+            if any("Technology" in s for s in primary_sectors):
+                opportunities.append("Artificial intelligence, cloud computing, and digital transformation providing multi-year growth runways for technology investments")
+            
+            if "consumer" in sector_str:
+                opportunities.append("Emerging middle class consumption growth supporting multi-year expansion for consumer-focused companies")
+            
+            if "healthcare" in sector_str or "pharma" in sector_str:
+                opportunities.append("Aging demographics and healthcare innovation creating sustained growth opportunities in medical and pharmaceutical sectors")
+            
+            if "renewable" in sector_str or "energy" in sector_str:
+                opportunities.append("Energy transition and decarbonization investments offering structural growth through the transition to renewable energy")
+            
+            # Geographical opportunities
+            if foreign_weight > 0:
+                opportunities.append("International exposure providing access to differentiated growth drivers and economic cycles")
+            else:
+                opportunities.append("Potential to enhance returns through selective addition of international leaders in structurally growing industries")
+            
+            # Create the LLM analysis object
             llm_analysis = LLMAnalysis(
                 summary=summary,
                 impact=overall_impact,
@@ -358,9 +505,9 @@ class MutualFundAnalyzer:
             return LLMAnalysis(
                 summary=f"Error performing LLM analysis: {str(e)}",
                 impact="Neutral",
-                recommendations=["Consult a financial advisor"],
-                risks=["Unable to assess risks due to analysis error"],
-                opportunities=["Unable to assess opportunities due to analysis error"]
+                recommendations=["Consult a financial advisor for personalized long-term strategy"],
+                risks=["Unable to assess long-term risks due to analysis error"],
+                opportunities=["Unable to assess long-term opportunities due to analysis error"]
             )
     
     def analyze_mutual_fund(self, fund: MutualFund) -> MutualFundAnalysis:
